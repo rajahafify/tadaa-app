@@ -1,6 +1,10 @@
 {
-  "name": "app",
+  "name": "Tada",
   "private": "true",
+  "scripts": {
+      "dev": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds --watch",
+      "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules --watch"
+  },
   "dependencies": {
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.0.1",
