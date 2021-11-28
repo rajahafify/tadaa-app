@@ -2,21 +2,22 @@
   "0 debug pnpm:scope": {
     "selected": 1
   },
-  "1 error pnpm": {
-    "code": "ELIFECYCLE",
-    "errno": "ENOENT",
-    "syscall": "spawn",
-    "file": "sh",
-    "pkgid": "Tada@",
-    "stage": "build:css",
-    "script": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules --watch",
-    "pkgname": "Tada",
+  "1 info pnpm": {
     "err": {
-      "name": "pnpm",
-      "message": "Tada@ build:css: `sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules --watch`\nspawn ENOENT",
-      "code": "ELIFECYCLE",
-      "stack": "pnpm: Tada@ build:css: `sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules --watch`\nspawn ENOENT\n    at ChildProcess.<anonymous> (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:91330:22)\n    at ChildProcess.emit (events.js:315:20)\n    at maybeClose (internal/child_process.js:1048:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)"
+      "name": "Error",
+      "message": "not found: instal",
+      "code": "ENOENT",
+      "stack": "Error: not found: instal\n    at getNotFoundError (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:36327:51)\n    at Function.whichSync [as sync] (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:36404:13)\n    at getCommandAbsolutePathSync (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:37969:44)\n    at default_1 (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:37978:32)\n    at /Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:130156:39"
     }
   },
-  "2 warn pnpm:global": " Local package.json exists, but node_modules missing, did you mean to install?"
+  "2 error pnpm": {
+    "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+    "prefix": "/Users/rajahafify/Documents/work/tadaa/tada",
+    "err": {
+      "name": "pnpm",
+      "message": "not found: instal",
+      "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+      "stack": "Error: not found: instal\n    at getNotFoundError (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:36327:51)\n    at Function.whichSync [as sync] (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:36404:13)\n    at getCommandAbsolutePathSync (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:37969:44)\n    at default_1 (/Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:37978:32)\n    at /Users/rajahafify/.asdf/installs/nodejs/14.16.1/.npm/lib/node_modules/pnpm/dist/pnpm.cjs:130156:39"
+    }
+  }
 }

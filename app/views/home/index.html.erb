@@ -1,25 +1,16 @@
-<div class="signin">
-  <main class="form-signin text-center">
-    <form>
-      <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+<div class="frontpage text-center">
+  <div class="frontpage-wrapper">
+    <%= image_tag "front.png", class: "img-fluid" %>
+    <h1>
+      Find Your <span>Talent</span>
+      <br /> With Us
+    </h1>
+    <p>
+      Join us and explore
+      <br /> thousands of people
+    </p>
+    <%= link_to "Continue", talents_path, class: "btn btn-lg btn-success btn-tada col-12", data: { turbolinks: false } %>
 
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
-    </form>
-  </main>
+    <!-- <button class="btn btn-lg btn-success col-12">Continue</button> -->
+  </div>
 </div>
