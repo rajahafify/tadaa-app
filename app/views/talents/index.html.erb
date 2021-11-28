@@ -1,21 +1,21 @@
 <%= render 'talents/navbar' %>
 <div class="talents" data-controller="swiper">
   <div id="swiper" class="swiper swiper-container">
-      <div class="swiper-wrapper">
-          <% @talents.each do |talent| %>
-              <div class="swiper-slide">
-                  <div class="card">
-                      <%= image_tag "ryan.png", class: "card-img-top", alt: "ryan.png", height: "480px" %>
-                      <div class="card-body">
-                          <h4 class="card-title">Ryan Reynolds</h4>
-                          <p class="card-text">
-                            Male, 34, Kuala Lumpur
-                          </p>
-                          <%= link_to "#{talent.name} Services", talent, class: "btn btn-lg btn-success btn-tada col-12" %>
-                      </div>
-                  </div>
-              </div>
-          <% end %>
-      </div>
+    <div class="swiper-wrapper">
+      <% @talents.each do |talent| %>
+        <div class="swiper-slide">
+          <div class="card">
+            <%= image_tag talent.images.first, class: "card-img-top", alt: "ryan.png", height: "480px" %>
+            <div class="card-body">
+              <h4 class="card-title">Ryan Reynolds</h4>
+              <p class="card-text">
+              Male, 34, Kuala Lumpur
+              </p>
+              <%= link_to "#{talent.name} Services", talent, class: "btn btn-lg btn-success btn-tada col-12" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
