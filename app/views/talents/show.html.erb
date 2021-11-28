@@ -1,0 +1,21 @@
+<%= render 'talents/navbar' %> 
+<div class="card talent"> 
+  <%= image_tag "ryan.png", class: "card-img-top", alt: "ryan.png", height: "420px" %>
+  <div class="card-body">
+    <h1 class="card-title">Ryan Reynolds</h4>
+    <h4 class="card-subtitle mb-2 text-muted">Actor, 34, Male, Kuala Lumpur</h2>
+    <p class="card-text">
+      Ryan Reynolds is a British actor, producer, and director. He has been nominated for an Academy Award for his role in the film The Prestige (2006), and has won two Golden Globe Awards for his work in the films The Dark Knight (2008) and The Dark Knight Rises (2012).</p>
+    </p>
+    <div class="social">
+      <% if @talent.instagram_url and @talent.instagram_handle %>
+        <i class="bi-instagram"></i>
+        <%= link_to @talent.instagram_handle, @talent.instagram_url %>
+      <% end %>
+      <% if @talent.twitter_url and @talent.twitter_handle %>
+        <i class="bi-twitter"></i>
+        <%= link_to @talent.twitter_handle, @talent.twitter_url  %>
+      <% end %>
+    </div>
+  </div>
+</div>

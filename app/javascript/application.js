@@ -4,12 +4,9 @@ import "./controllers"
 
 import * as bootstrap from "bootstrap"
 
-import Swiper from "swiper"
+ document.addEventListener('turbolinks:load', function() {
+   console.log('turbolinks:load')
+ });
 
-const swiper = new Swiper(".swiper-container", {
-  spaceBetween: 10
-})
-
-// document.addEventListener('turbolinks:load', function() {
-//   
-// });
+//
+console.log("Hello World!")

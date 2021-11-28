@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_20_073926) do
+ActiveRecord::Schema.define(version: 2021_11_28_113954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,6 +95,10 @@ ActiveRecord::Schema.define(version: 2021_11_20_073926) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "instagram_url"
+    t.string "instagram_handle"
+    t.string "twitter_url"
+    t.string "twitter_handle"
     t.index ["user_id"], name: "index_talents_on_user_id"
   end
 

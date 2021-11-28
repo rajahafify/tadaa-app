@@ -3,13 +3,14 @@
   "private": "true",
   "scripts": {
     "dev": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds --watch",
-    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules --watch" 
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules --watch"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.0.1",
     "@popperjs/core": "^2.11.0",
     "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.1",
     "esbuild": "^0.13.14",
     "sass": "^1.43.5",
     "swiper": "^7.3.1"
