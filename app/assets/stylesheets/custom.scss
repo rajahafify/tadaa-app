@@ -28,9 +28,15 @@
 }
 
 .talents {
-  height: 100vh;
+  height: calc(100vh - 66px);
   display: flex;
   align-items: center;
+}
+
+.talents-show {
+  .talents {
+    height: 100%;
+  }
 }
 
 .talent {
@@ -39,4 +45,8 @@
       color: #333;
     }
   }
+}
+
+.navbar {
+  margin-bottom: 10px;
 }
