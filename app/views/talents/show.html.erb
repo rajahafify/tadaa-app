@@ -1,15 +1,18 @@
 <%= render 'talents/navbar' %> 
 <div class="container">
-  <div class="card talent"> 
+  <div class="talent"> 
     <div class="talents" data-controller="swiper">
       <div id="swiper" class="swiper swiper-container">
         <div class="swiper-wrapper">
           <% @talent.images.each do |image| %>
             <div class="swiper-slide">
-              <%= image_tag image, class: "card-img-top img-thumbnail", height: "480px" %>
+              <%= image_tag image.variant(resize_and_pad: [400, 500]), class: "card-img-top"%>
             </div>
           <% end %>
         </div>
+        <div class="swiper-pagination"></div>
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
     </div>
     <div class="card-body">
