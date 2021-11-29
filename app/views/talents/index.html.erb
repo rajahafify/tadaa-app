@@ -5,11 +5,13 @@
       <% @talents.each do |talent| %>
         <div class="swiper-slide">
           <div class="card">
-            <%= image_tag talent.images.first.variant(resize_and_pad: [400, 500]), class: "card-img-top", alt: "ryan.png", height: "480px" %>
+            <%= image_tag talent.images.first.variant(resize_and_pad: [400, 500]), class: "card-img-top", alt: "ryan.png" if talent.images.exists? %>
             <div class="card-body">
-              <h4 class="card-title">Ryan Reynolds</h4>
+              <h4 class="card-title">
+                <%= talent.name %>
+              </h4>
               <p class="card-text">
-              Male, 34, Kuala Lumpur
+                <%= talent.description.truncate(50) %>
               </p>
               <%= link_to "#{talent.name} Services", talent, class: "btn btn-lg btn-success btn-tada col-12" %>
             </div>
@@ -17,8 +19,9 @@
         </div>
       <% end %>
     </div>
+    <div class="swiper-scrollbar"></div>
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <!-- <div class="swiper-button-prev"></div> -->
+    <!-- <div class="swiper-button-next"></div> -->
   </div>
 </div>
