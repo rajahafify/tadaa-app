@@ -32,3 +32,8 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
+google:
+  service: GCS
+  project: warcam
+  credentials: <%= Rails.application.credentials.gcskey.as_json %>
+  bucket: tadaa-app-heroku
