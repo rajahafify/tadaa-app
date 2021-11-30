@@ -43,7 +43,7 @@ class TalentsController < ApplicationController
 
   def talent_params
     params.require(:talent).permit(
-      :name, :description,
+      :name, :description, :subtitle,
       :instagram_url, :instagram_handle,
       :twitter_url, :twitter_handle,
       images: []

@@ -3,6 +3,7 @@
   "private": "true",
   "scripts": {
     "dev": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds --watch",
+    "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",
     "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules --watch"
   },
   "dependencies": {

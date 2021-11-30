@@ -16,10 +16,10 @@
       </div>
     </div>
     <div class="card-body">
-      <h1 class="card-title">Ryan Reynolds</h4>
-      <h4 class="card-subtitle mb-2 text-muted">Actor, 34, Male, Kuala Lumpur</h2>
+      <h1 class="card-title"><%= @talent.name %></h4>
+      <h4 class="card-subtitle mb-2 text-muted"><%= @talent.subtitle %></h2>
       <p class="card-text">
-      Ryan Reynolds is a British actor, producer, and director. He has been nominated for an Academy Award for his role in the film The Prestige (2006), and has won two Golden Globe Awards for his work in the films The Dark Knight (2008) and The Dark Knight Rises (2012).</p>
+        <%= @talent.description %>
       </p>
       <div class="social">
         <% if @talent.instagram_url and @talent.instagram_handle %>

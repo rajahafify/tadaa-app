@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_28_141435) do
+ActiveRecord::Schema.define(version: 2021_11_30_035255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_141435) do
     t.string "instagram_handle"
     t.string "twitter_url"
     t.string "twitter_handle"
+    t.string "subtitle"
     t.index ["user_id"], name: "index_talents_on_user_id"
   end
 
