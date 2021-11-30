@@ -68,6 +68,6 @@ group :test do
   gem "webdrivers"
 end
 
-group :development do
-  gem "faker"
+group :production do
+  gem "sentry-ruby"
 end
