@@ -8,7 +8,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <%= link_to "Home", root_path, class: "nav-link active" %>
+          <%= link_to "Home", root_path, class: "nav-link #{'active' if controller_name == 'home' and action_name == 'index'}" %>
+          <%= link_to "Add new talent", new_talent_path, class: "nav-link #{'active' if controller_name == 'talents' and action_name == 'new'}" %>
         </li>
       </ul>
       <form class="d-flex">
