@@ -6,7 +6,7 @@
         <div class="swiper-wrapper">
           <% @talent.images.each do |image| %>
             <div class="swiper-slide">
-              <%= image_tag image.variant(resize_and_pad: [400, 500]), class: "card-img-top" if image.present? %>
+              <%= image_tag image.representation(resize_and_pad: [400,500]), class: "card-img-top" if image.variable? %>
             </div>
           <% end %>
         </div>
