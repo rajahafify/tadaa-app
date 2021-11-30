@@ -5,7 +5,7 @@
       <% @talents.each do |talent| %>
         <div class="swiper-slide">
           <div class="card">
-            <%= image_tag talent.images.sample, class: "card-img-top", alt: "ryan.png" if talent.images.exists? %>
+            <%= image_tag talent.images.sample, class: "card-img-top profile", alt: "ryan.png" if talent.images.attached? %>
             <div class="card-body">
               <h4 class="card-title">
                 <%= talent.name %>
