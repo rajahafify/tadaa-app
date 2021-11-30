@@ -6,7 +6,7 @@ class Talent < ApplicationRecord
 
   has_many_attached :images
 
-  after_commit :resize_images, on: [:create, :update]
+  before_save :resize_images, on: [:create, :update]
 
   private
 
