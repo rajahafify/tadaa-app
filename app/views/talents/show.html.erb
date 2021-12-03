@@ -3,6 +3,7 @@
   <div class="talent"> 
     <div class="talents" data-controller="swiper">
       <div id="swiper" class="swiper swiper-container">
+        <div class="swiper-pagination"></div>
         <div class="swiper-wrapper">
           <% @talent.images.each do |image| %>
             <div class="swiper-slide">
@@ -10,9 +11,6 @@
             </div>
           <% end %>
         </div>
-        <div class="swiper-pagination"></div>
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
       </div>
     </div>
     <div class="card-body">

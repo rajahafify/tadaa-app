@@ -4,24 +4,11 @@
     <div class="swiper-wrapper">
       <% @talents.each do |talent| %>
         <div class="swiper-slide">
-          <div class="card">
-            <%= image_tag talent.images.sample, class: "card-img-top profile", alt: "ryan.png" if talent.images.attached? %>
-            <div class="card-body">
-              <h4 class="card-title">
-                <%= talent.name %>
-              </h4>
-              <p class="card-text">
-                <%= talent.description.truncate(50) %>
-              </p>
-              <%= link_to "#{talent.name} Services", talent, class: "btn btn-lg btn-success btn-tada col-12" %>
-            </div>
-          </div>
+          <%= link_to talent do %>
+            <%= render 'talents/talent', talent: talent %>
+          <% end %>
         </div>
       <% end %>
     </div>
-    <div class="swiper-scrollbar"></div>
-    <!-- If we need navigation buttons -->
-    <!-- <div class="swiper-button-prev"></div> -->
-    <!-- <div class="swiper-button-next"></div> -->
   </div>
 </div>

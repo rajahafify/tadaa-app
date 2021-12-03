@@ -1,0 +1,12 @@
+<div class="card shadow-sm text-white">
+  <%= image_tag talent.images.sample, class: "card-img-top profile", alt: "ryan.png" if talent.images.attached? %>
+  <div class="card-img-overlay">
+    <button class="btn-lg btn col-12 visibility-hidden"></button>
+    <h4 class="card-title">
+      <%= talent.name %>
+    </h4>
+    <p class="card-text">
+      <%= talent.description.truncate(50) %>
+    </p>
+  </div>
+</div>

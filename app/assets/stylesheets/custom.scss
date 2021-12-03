@@ -25,17 +25,44 @@
 
 .swiper {
   padding: 10px;
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      border: 5px solid #fff;
+      width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 10px));
+      height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 10px));
+      &.swiper-pagination-bullet-active {
+        background-color: #fff;
+        border: 1px solid #000;
+      }
+    }
+  }
 }
 
 .talents {
   // height: calc(100vh - 66px);
   display: flex;
   align-items: center;
+
+  a {
+    color: #000;
+  }
+
+  .profile {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .talents-show {
   .talents {
     height: 100%;
+  }
+  .profile {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -51,10 +78,11 @@
   margin-bottom: 10px;
 }
 
-.profile {
-  height: 450px;
-  width: 100%;
-  object-fit: cover;
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
 }
 
 @media (min-width: 375px) {
