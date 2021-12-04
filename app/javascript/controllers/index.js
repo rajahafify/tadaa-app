@@ -3,9 +3,11 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
+import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
-import SwiperController from "./swiper_controller"
+import PurchasableController from "./purchasable_controller.js"
+application.register("purchasable", PurchasableController)
 
+import SwiperController from "./swiper_controller.js"
 application.register("swiper", SwiperController)

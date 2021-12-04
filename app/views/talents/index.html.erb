@@ -7,6 +7,7 @@
           <%= link_to talent do %>
             <%= render 'talents/talent', talent: talent %>
           <% end %>
+          <button data-controller="purchasable" data-purchasable-id-value="<%= talent.id %>" data-purchasable-type-value="Talent" data-action="click->purchasable#click">Shortlist</button>
         </div>
       <% end %>
     </div>
