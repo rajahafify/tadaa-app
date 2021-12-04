@@ -7,6 +7,7 @@ class CartItemsController < ApplicationController
     if current_user.cart.save
       respond_to do |format|
         format.html { redirect_to cart_path }
+        format.json { render json: { message: 'Item added to cart' } }
       end
     end
   end

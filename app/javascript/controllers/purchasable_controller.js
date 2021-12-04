@@ -1,9 +1,21 @@
 import { Controller } from "@hotwired/stimulus"
-import { get } from "@rails/request.js"
+import { post } from "@rails/request.js"
 
 // Connects to data-controller="purchasable"
 export default class extends Controller {
-  click() {
-    console.log('clicked')
+  static values = {
+    id: String,
+    type: String,
+  }
+  async click() {
+    const response = await post('/cart_items', {
+      body: JSON.stringify({
+        purchasable_id: this.idValue,
+        purchasable_type: this.typeValue,
+      })
+    })
+    if(response.ok) {
+      debugger
+    }
   }
 }

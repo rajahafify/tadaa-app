@@ -76,3 +76,7 @@ end
 gem "dotenv-rails", "~> 2.7"
 
 gem "mini_magick", "~> 4.11"
+
+gem "requestjs-rails", "~> 0.0.5"
+
+gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
