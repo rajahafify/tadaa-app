@@ -111,6 +111,8 @@ GEM
     debug (1.3.4)
       irb (>= 1.3.6)
       reline (>= 0.2.7)
+    devise-guests (0.8.1)
+      devise
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
@@ -283,6 +285,7 @@ DEPENDENCIES
   cssbundling-rails (>= 0.1.0)
   debug (>= 1.0.0)
   devise!
+  devise-guests (~> 0.8.1)
   dotenv-rails (~> 2.7)
   image_processing (~> 1.2)
   jbuilder (~> 2.7)

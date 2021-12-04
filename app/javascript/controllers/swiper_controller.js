@@ -4,7 +4,7 @@ import Swiper from 'swiper/bundle'
 
 export default class extends Controller {
   connect() {
-    const swiper = new Swiper(".swiper-container", {
+     this.swiper = new Swiper(".swiper-container", {
       spaceBetween: 15,
       effects: "cube",
       loop: true,
@@ -22,5 +22,11 @@ export default class extends Controller {
         el: '.swiper-scrollbar',
       },
     })
+  }
+
+  removeSlide(event) {
+    debugger
+    const index = parseInt(event.target.dataset.swiperIndex)
+    this.swiper.removeSlide(index)
   }
 }

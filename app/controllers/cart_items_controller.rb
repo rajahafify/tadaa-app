@@ -1,13 +1,16 @@
 class CartItemsController < ApplicationController
-  before_action :set_cart, only: [:create, :destroy]
-
   def create
-    current_user.cart.cart_items.new(cart_item_params)
+    cart_item = current_cart.cart_items.find_or_initialize_by(cart_item_params)
 
-    if current_user.cart.save
+    if cart_item.save
       respond_to do |format|
-        format.html { redirect_to cart_path }
-        format.json { render json: { message: 'Item added to cart' } }
+        format.html { redirect_to cart_path(current_cart) }
+        format.json { render json: { message: 'Item added to cart', cart_item: cart_item } }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to cart_path(current_cart) }
+        format.json { render json: { message: "Item could not be added to cart. #{cart_items.errors.full_messages.join}" } }
       end
     end
   end

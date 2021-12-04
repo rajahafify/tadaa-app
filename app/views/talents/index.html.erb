@@ -2,12 +2,12 @@
 <div class="talents" data-controller="swiper">
   <div id="swiper" class="swiper swiper-container">
     <div class="swiper-wrapper">
-      <% @talents.each do |talent| %>
-        <div class="swiper-slide">
+      <% @talents.each_with_index do |talent, index| %>
+        <div class="swiper-slide" id="talent-<%= talent.id %>">
           <%= link_to talent do %>
             <%= render 'talents/talent', talent: talent %>
           <% end %>
-          <button data-controller="purchasable" data-purchasable-id-value="<%= talent.id %>" data-purchasable-type-value="Talent" data-action="click->purchasable#click">Shortlist</button>
+          <button data-controller="purchasable" data-purchasable-id-value="<%= talent.id %>" data-purchasable-type-value="Talent" data-swiper-index="<%= index %>" data-action="click->purchasable#click click->swiper#removeSlide">Shortlist</button>
         </div>
       <% end %>
     </div>

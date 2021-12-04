@@ -9,13 +9,17 @@ export default class extends Controller {
   }
   async click() {
     const response = await post('/cart_items', {
-      body: JSON.stringify({
+      body: {
         purchasable_id: this.idValue,
         purchasable_type: this.typeValue,
-      })
+      },
+      contentType: 'application/json',
+      responseKind: 'json',
     })
     if(response.ok) {
-      debugger
+      const body = await response.text
+      const talentId = body.id
+      console.log(document.getElementById(`talent-${talentId}`))
     }
   }
 }

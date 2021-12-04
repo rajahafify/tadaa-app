@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
   def current_cart
-    current_user.cart.current
+    current_or_guest_user.carts.current
   end
 end
 

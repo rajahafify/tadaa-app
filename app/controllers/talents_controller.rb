@@ -1,6 +1,6 @@
 class TalentsController < ApplicationController
   def index
-    @talents = Talent.all.order("RANDOM()")
+    @talents = Talent.all.order("RANDOM()").where.not(id: current_cart.cart_items.where(purchasable_type: 'Talent').pluck(:purchasable_id))
   end
 
   def show
