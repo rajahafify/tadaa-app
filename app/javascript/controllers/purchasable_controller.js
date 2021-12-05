@@ -17,9 +17,7 @@ export default class extends Controller {
       responseKind: 'json',
     })
     if(response.ok) {
-      const body = await response.text
-      const talentId = body.id
-      console.log(document.getElementById(`talent-${talentId}`))
+      const json = await response.json
     }
   }
 }

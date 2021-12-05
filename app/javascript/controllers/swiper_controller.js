@@ -25,8 +25,7 @@ export default class extends Controller {
   }
 
   removeSlide(event) {
-    debugger
-    const index = parseInt(event.target.dataset.swiperIndex)
+    const index = this.swiper.realIndex
     this.swiper.removeSlide(index)
   }
 }
