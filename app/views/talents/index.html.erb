@@ -3,11 +3,11 @@
   <div id="swiper" class="swiper swiper-container">
     <div class="swiper-wrapper">
       <% @talents.each_with_index do |talent, index| %>
-        <div class="swiper-slide" id="talent-<%= talent.id %>">
+        <div class="swiper-slide" id="talent-<%= talent.id %>" data-history="talent-<%= talent.id %>">
           <%= link_to talent do %>
             <%= render 'talents/talent', talent: talent %>
           <% end %>
-          <button data-controller="purchasable" data-purchasable-id-value="<%= talent.id %>" data-purchasable-type-value="Talent" data-action="click->purchasable#click click->swiper#removeSlide">Shortlist</button>
+          <button class="btn btn-lg btn-dark col-12 mt-10" data-controller="purchasable" data-purchasable-id-value="<%= talent.id %>" data-purchasable-type-value="Talent" data-action="click->purchasable#click click->swiper#removeSlide" data-purchasable-response-kind-value="json">Shortlist</button>
         </div>
       <% end %>
     </div>

@@ -4,12 +4,12 @@ class CartItemsController < ApplicationController
 
     if cart_item.save
       respond_to do |format|
-        format.html { redirect_to cart_path(current_cart) }
-        format.json { render json: { message: 'Item added to cart', cart_item: cart_item } }
+        format.html { redirect_to talents_path }
+        format.json { render json: { message: 'Item added to cart', cart_item: cart_item, cart_items_count: current_cart.cart_items.count } }
       end
     else
       respond_to do |format|
-        format.html { redirect_to cart_path(current_cart) }
+        format.html { redirect_to talents_path }
         format.json { render json: { message: "Item could not be added to cart. #{cart_items.errors.full_messages.join}" } }
       end
     end

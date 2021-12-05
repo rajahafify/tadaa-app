@@ -9,6 +9,11 @@ export default class extends Controller {
       effects: "cube",
       loop: true,
 
+       history: {
+        key: 'talent',
+        replaceState: false,
+       },
+
       pagination: {
         el: '.swiper-pagination',
       },

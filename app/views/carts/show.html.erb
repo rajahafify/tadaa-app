@@ -1,2 +1,27 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
+<div class="container">
+  <br>
+  <div id="list-tab" class="list-group" role="tablist" data-contoller="cart">
+    <% current_cart.cart_items.each_with_index do |cart_item, index| %>
+      <a href="#" class="list-group-item list-group-item-action" aria-current="true" data-toggle="list" id="cart-item-<%= index %>">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">
+            <%= cart_item.purchasable.name %>
+          </h5>
+          <small>
+            <%= time_ago_in_words current_or_guest_user.updated_at %>
+          </small>
+        </div>
+        <p class="mb-1">
+        <%= cart_item.purchasable.subtitle %>
+        </p>
+        <small>Status: Unconfirmed</small>
+      </a>
+    <% end %>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-12">
+      <%= link_to 'Checkout', cart_path(current_cart), class: 'btn btn-success btn-lg col-12 btn-tada', data: { method: :delete, confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</div>

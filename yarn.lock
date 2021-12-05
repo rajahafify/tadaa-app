@@ -243,6 +243,18 @@ is-number@^7.0.0:
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
+"morphdom@>=2.6.0 <3.0.0":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/morphdom/-/morphdom-2.6.1.tgz#e868e24f989fa3183004b159aed643e628b4306e"
+  integrity sha512-Y8YRbAEP3eKykroIBWrjcfMw7mmwJfjhqdpSvoqinu8Y702nAwikpXcNFDiIkyvfCLxLM9Wu95RZqo4a9jFBaA==
+
+mrujs@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/mrujs/-/mrujs-0.7.2.tgz#24245004241d621870ce359bd1647fd84e0da62b"
+  integrity sha512-k6zHbDn9xImDdVIOAbGDqfbLahh1LjeP1RhNNyuO05ZPKHrpoCTsZsV9ODGMKRtCbxG9Bj9wFE0R2QIqxz4hWA==
+  dependencies:
+    morphdom ">=2.6.0 <3.0.0"
+
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
